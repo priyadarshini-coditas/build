@@ -82,7 +82,7 @@ Select SSH keypair in order to login to your instance. You can either choose exi
 MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
 
 ## Prerequisites 
- - RAM : 8 GB
+ - RAM : 4 GB
  - Storage : 200 GB
  - Operating system : Linux/Windows
 
@@ -404,7 +404,7 @@ This section contains optional procedures for configuring Linux hosts to work be
 ​
 
 [Post-installation steps for Linux ](https://docs.docker.com/engine/install/linux-postinstall/)
-## Manage Docker as a non-root user
+### Manage Docker as a non-root user
 
 - Create the docker group.
 
@@ -492,28 +492,28 @@ We are installing jenkins on same instance of backend but you can have seperate 
 
 [Click here](https://www.jenkins.io/doc/book/installing/windows/) for setting up Jenkins on Windows
 
-## Unlock Jenkins
+### Unlock Jenkins
 
 ![Image](images/j1.png "Unlock Jenkins")
 
-## Install suggested plugins
+### Install suggested plugins
 
 ![Image](images/j4.png "Suggested plugins")
 
-## Create an admin user 
+### Create an admin user 
 
 ![Image](images/j7.png "admin-user")
 
-## Create a developer role
+### Create a developer role
 
 ![Image](images/j8.png "dev-role")
 
-## Add Github credentials for cloning
+### Add Github credentials for cloning
 
 ![Image](images/gitcred.png "git-jenkins")
 
 
-## Add Global security credentials (ssh keys)
+### Add Global security credentials (ssh keys)
 
 1. Let's create a new domain, called Web Servers. We can then add authorization credentials to that domain. To create the new domain, log in to your Jenkins instance and click Credentials in the left navigation
 
@@ -622,7 +622,7 @@ EOF
 
 NOTE : Replace `ec2-3-143-140-219.us-east-2.compute.amazonaws.com` with your frontend server IP or DNS. Also please setup [ssh passwordless connection](https://www.linuxbabe.com/linux-server/setup-passwordless-ssh-login) between jenkins & front end server.
 
-![Image](images/jfrontend.png "frontend job")
+![Image](images/new-frontend.png "frontend job")
 
 --- 
 ## Setup Backend Deployment Job
@@ -707,7 +707,7 @@ and paste he contents of file we generated in above step
 
 and paste the contents of private key
 
-### Frontend Nginx Setup
+### Backend Nginx Setup
 
 Please follow the steps given below to setup nginx reverse proxy.
 
@@ -759,7 +759,7 @@ server {
 
        sudo service nginx restart
 
-### Frontend Nginx Setup
+### Backend Nginx Setup
 
 Please follow the steps given below to setup nginx reverse proxy.
 
